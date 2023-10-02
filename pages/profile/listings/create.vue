@@ -64,8 +64,6 @@ const inputs = [
 </script>
 <template>
   <div>
-    {{info.year}}
-    {{info}}
     <div class="mt-24">
       <h1 class="text-6xl mt-24">Create a new listing</h1>
     </div>
@@ -84,7 +82,13 @@ const inputs = [
         :placeholder="input.placeholder"
         @changeInput="onChangeInput"
       />
-
+      <CarAdTextarea
+        title="Description *"
+        name="description"
+        placeholder=""
+        @changeInput="onChangeInput"
+      />
+      <CarAdImage @changeInput="onChangeInput" />
     </div>
   </div>
 </template>
