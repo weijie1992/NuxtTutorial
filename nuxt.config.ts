@@ -6,5 +6,12 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@vueuse/nuxt',
     '@nuxtjs/supabase'
-  ]
+  ],
+  supabase: {
+    redirectOptions: {
+      login: '/login',
+      callback: '/confirm',
+      exclude: ["/car/*","/city/*","/","/profile/*"],
+    }
+  }
 })
